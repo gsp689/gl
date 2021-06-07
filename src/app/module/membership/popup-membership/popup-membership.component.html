@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>Project Name : {{ membershipData.projectName }}</h2>
+<mat-dialog-content class="mat-typography">
+  <p>
+    Project Id : <strong>{{ membershipData.projectId }}</strong> | Project Status :
+    <strong>{{ membershipData.status }}</strong> | Create On :
+    <strong>{{ membershipData.createdAt | date: "dd-MM-yy hh:mm:ss a" }}</strong>
+  </p>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Status</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of membershipData.membership; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td *ngIf="item.membershipStatus === 'SUCCESS'">
+          <span class="badge bg-success"> {{ item.membershipStatus }}</span>
+        </td>
+        <td *ngIf="item.membershipStatus !== 'SUCCESS'">
+          <span class="badge bg-danger"> {{item.membershipStatus}}</span>
+        </td>
+        <td>{{ item.membershipDate | date: "dd-MM-yy hh:mm:ss a" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>
+

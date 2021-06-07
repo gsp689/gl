@@ -1,0 +1,19 @@
+.logo {
+  color: white !important;
+  /* text-decoration: underline !important; */
+  /* -webkit-text-decoration-color: white !important; Safari   */
+  /* text-decoration-color: white !important; */
+  border-bottom: 3px solid;
+  padding-bottom: 3px
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  height: 64px;
+  position: fixed;
+  z-index: 100;
+  width: 100% !important;
+}

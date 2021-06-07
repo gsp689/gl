@@ -1,0 +1,70 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+    <strong>
+      <a class="navbar-brand logo">General Ledger Tool </a>
+    </strong>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarCollapse"
+      aria-controls="navbarCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [routerLinkActive]="'active'">
+          <a class="nav-link" [routerLink]="'/home/general-ledger-balance'">General Ledger Balance </a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="'active'">
+          <a class="nav-link" [routerLink]="'/home/sub-ledger-balance'">Sub Ledger Balance</a>
+        </li>
+		<li class="nav-item" [routerLinkActive]="'active'">
+          <a class="nav-link" [routerLink]="'/home/general-ledger-balance/add'">Ledger Adustment</a>
+        </li>
+      </ul>
+
+      <button
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        aria-label="Example icon-button with a menu"
+      >
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item disabled>
+          <mat-icon>perm_identity</mat-icon>
+          <span>{{ user ? user.name : "NA" }}</span>
+        </button>
+
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </div>
+  </nav>
+</header>
+
+<!-- <mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Autoliv</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Logout</span>
+    </button>
+   
+  </mat-menu>
+</mat-toolbar> -->

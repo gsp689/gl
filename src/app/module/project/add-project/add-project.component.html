@@ -1,0 +1,86 @@
+<p></p>
+<div class="container">
+  <h2>Add General Ledger Balance</h2>
+  <p class="lead"><strong>Add General Ledger Balance</strong></p>
+  
+  <form [formGroup]="addForm" *ngIf="addForm" (ngSubmit)="submitCreateForm()">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="accoundId">Accound Id</label>
+                <input type="text" class="form-control" placeholder="Account Id" formControlName="accoundId" />
+        
+
+                <!-- <small class="alert alert-danger" *ngIf="f.accoundId.errors?.required">
+                    Accound Id <strong>Required</strong>
+                </small>
+                <small class="alert alert-danger" *ngIf="f.accoundId.errors?.touched">
+                    Accound Id <strong>Required</strong>
+                </small>
+                <small class="alert alert-danger" *ngIf="f.accoundId.errors?.pattern">
+                    Accound Id <strong>Required</strong>
+                </small> -->
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="currency">currency</label>
+                <input type="text" class="form-control" placeholder="Enter currency" formControlName="currency" />
+                <!-- <small class="alert alert-danger" *ngIf="f.currency.errors?.required">
+                    currency <strong>Required</strong>
+                </small>
+                <small class="alert alert-danger" *ngIf="f.currency.errors?.touched">
+                    currency <strong>Required</strong>
+                </small>
+                <small class="alert alert-danger" *ngIf="f.currency.errors?.pattern">
+                    currency <strong>Required</strong> 
+                </small>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="amoount">amount</label>
+                <input type="text" class="form-control"  placeholder="Enter amount"
+                    formControlName="amount" />
+             
+                <!-- <small class="alert alert-danger" *ngIf="f.amoount.errors?.required">
+                    amoount <strong>Required</strong>
+                </small>
+                <small class="alert alert-danger" *ngIf="f.amoount.errors?.touched">
+                    amoount <strong>Required</strong>
+                </small>
+                <small class="alert alert-danger" *ngIf="f.amoount.errors?.pattern">
+                    amoount <strong>Required</strong>
+                </small> -->
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input class="form-control" placeholder="Enter date"
+                    formControlName="date" />
+              
+                <!-- <small class="alert alert-danger" *ngIf="f.date.errors?.required">
+                    date <strong> Required</strong>
+                </small>
+                <small class="alert alert-danger" *ngIf="f.date.errors?.touched">
+                    date <strong> Required</strong>
+                </small> -->
+            </div>
+        </div>
+    </div>
+
+    <button [disabled]="!addForm.valid" type="submit" class="btn btn-primary">
+        Submit
+    </button>
+
+    <div>
+       
+    </div>
+</form>
+</div>
