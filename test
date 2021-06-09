@@ -1,0 +1,1 @@
+[ngStyle]="{'background-color':row.amount === 123.23 ? 'green' : 'red' }"
