@@ -1,0 +1,22 @@
+Web UI url : http://gl-tool-web.azurewebsites.net/
+Service URL : http://gl-tool-svc.eastus.azurecontainer.io:8080/
+
+
+rest calls:
+GET : http://gl-tool-svc.eastus.azurecontainer.io:8080/subLedgerBalance
+GET : http://gl-tool-svc.eastus.azurecontainer.io:8080/generalLedgerBalance
+GET : http://gl-tool-svc.eastus.azurecontainer.io:8080/glDelta
+GET : http://gl-tool-svc.eastus.azurecontainer.io:8080/glAdjustment
+
+//run glDelta job for 2021-04-03,it will populate data in glDelta for 2021-04-03
+POST : http://gl-tool-svc.eastus.azurecontainer.io:8080/glDelta/run/2021-04-03
+
+POST : http://gl-tool-svc.eastus.azurecontainer.io:8080/glAdjustment
+
+{  
+    "id": 8,  
+    "acctId": 10002,  
+    "date": "2021-04-03",
+    "currency": "USD",
+	"amount": 25000.00	
+}
