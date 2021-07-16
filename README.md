@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+insert into GENERAL_LEDGER_BALANCE (ID, GL_ACCT_ID, GL_TRAN_DATE, GL_TRAN_CURRENCY, GL_TRAN_AMOUNT)values
+(8,10002,DATE '2021-04-03','USD',25000.00),
+(7,10001,DATE '2021-04-03','USD',12000.00),
+(6,10002,DATE '2021-04-02','USD',0.00),
+(5,10001,DATE '2021-04-02','USD',12000.00),
+(4,10002,DATE '2021-04-01','USD',0.00),
+(3,10001,DATE '2021-04-01','USD',12000.00),
+(2,10002,DATE '2021-03-31','USD',0.00),
+(1,10001,DATE '2021-03-31','USD',0.00);
